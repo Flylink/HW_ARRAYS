@@ -3,9 +3,6 @@ package ru.netology.stats;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class StatsServiceTest {
 
     @Test
@@ -38,10 +35,10 @@ public class StatsServiceTest {
 
         long[] temps = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        List<Integer> expectedMonths = Arrays.asList(9);
-        List<Integer> actualMonths = service.minSales(temps);
+        int expectedMonth = 9;
+        int actualMonths = service.minSales(temps);
 
-        Assertions.assertEquals(expectedMonths, actualMonths);
+        Assertions.assertEquals(expectedMonth, actualMonths);
     }
 
     @Test
@@ -50,10 +47,10 @@ public class StatsServiceTest {
 
         long[] temps = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        List<Integer> expectedMonths = Arrays.asList(6, 8);
-        List<Integer> actualMonths = service.maxSales(temps);
+        int expectedMonth = 8;
+        int actual = service.maxSales(temps);
 
-        Assertions.assertEquals(expectedMonths, actualMonths);
+        Assertions.assertEquals(expectedMonth, actual);
     }
 
     @Test
